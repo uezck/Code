@@ -7,7 +7,8 @@ void TestPrintPrimes(int numbers, int cc, int rr, int m) {
   std::ofstream out("YourPrint.txt");
   std::streambuf *coutbuf = std::cout.rdbuf();
   std::cout.rdbuf(out.rdbuf()); // cout auf Datei "YourPrint.txt" umleiten
-  PrintPrimeNumbersToFile(numbers,cc,rr,m);
+  PrimePrinter printer = PrimePrinter(cc, rr, m);
+  printer.PrintToFile(numbers);
   out.close();
 
   std::ifstream goldFile("PerfectPrint.txt");
