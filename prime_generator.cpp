@@ -18,10 +18,8 @@ std::vector<int> PrimeGenerator::GeneratePrime(int numbers){
 
   int j = 1;
   int k = 1;
-  
   int ord = 2;
   int square = 9;
-  
   prime_numbers[1] = 2;
   
   while (k < numbers) {
