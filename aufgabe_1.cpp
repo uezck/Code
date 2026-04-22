@@ -1,8 +1,6 @@
 #include "prime_printer.h"
 
-
-
 int main() {
-  PrintPrimeNumbersToFile(300,4,50,300);
+  print();
   return 0;
 }

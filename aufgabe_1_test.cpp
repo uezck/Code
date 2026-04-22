@@ -1,13 +1,13 @@
 #include "mapra_test.h"
 #include "prime_printer.h"
 
-void TestPrintPrimes(int numbers, int cc, int rr, int m) {
+void TestPrintPrimes() {
   mapra::MapraTest test("PrimePrintTester");
 
   std::ofstream out("YourPrint.txt");
   std::streambuf *coutbuf = std::cout.rdbuf();
   std::cout.rdbuf(out.rdbuf()); // cout auf Datei "YourPrint.txt" umleiten
-  PrintPrimeNumbersToFile(numbers,cc,rr,m);
+  print();
   out.close();
 
   std::ifstream goldFile("PerfectPrint.txt");
@@ -31,6 +31,6 @@ void TestPrintPrimes(int numbers, int cc, int rr, int m) {
 }
 
 int main() {
-  TestPrintPrimes(300,4,50,300);
+  TestPrintPrimes();
   return 0;
 }
